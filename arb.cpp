@@ -15,18 +15,14 @@ void Arb::display() {
     glClearColor(0.3, 0.5, 0.8, 0.);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-    glBegin(GL_TRIANGLES);
-    glColor3ub(0xFF , 0 , 0);
-    glVertex2f(0 , 0);
-    glColor3f(0 , 0 , 1);
-    glVertex2f(-1 , 0.9);
-    glVertex2f(1 , 0.9);
-
-    glColor3i(2147483647 , 0 , 0);
-    glVertex2f(0 , 0);
-    glColor3b(0 , 127 , 0);
-    glVertex2f(-1 , -0.9);
-    glVertex2f(1 , -0.9);
+    glLineWidth(6.);
+    gl2psLineWidth(6.);
+    gl2psLineCap(GL2PS_LINE_CAP_SQUARE);
+    gl2psLineJoin(GL2PS_LINE_JOIN_ROUND);
+    glBegin(GL_LINE_STRIP);
+    glVertex3f(-0.5, 0.8, 0.0);
+    glVertex3f(-0.35, 0.98, 0.2);
+    glVertex3f(-0.2, 0.8, 0.0);
     glEnd();
 
     glFlush();
