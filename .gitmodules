@@ -1,0 +1,3 @@
+[submodule "gl2ps"]
+	path = gl2ps
+	url = http://gitlab.onelab.info/gl2ps/gl2ps.git
